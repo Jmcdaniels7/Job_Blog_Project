@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Job Posting "We will innovate a name for our website"</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Job posting</a></h1>
-        </header>
+{% extends 'blog/base.html' %}
 
-        <article>
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">"this is a title of a post"</a></h2>
-            <p>Wow, what a cool website!</p>
-        </article>
-
-        <article>
-            <time>published: 14.06.2014, 12:14</time>
-            <h2><a href="">"This is the title of a post"</a></h2>
-            <p>Very cool!</p>
-        </article>
-    </body>
-</html>
+{% block content %}
+{% for post in posts %}
+    <article class="post">
+        <time class="date">
+            {{ post.published_date }}
+        </time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+{% endfor %}
+{% endblock %}
