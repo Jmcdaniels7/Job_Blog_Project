@@ -1,0 +1,85 @@
+<!--Brody Rines, 9/28/2024, 11:30-->
+{% extends 'blog/base.html' %} {% block content %}
+<div class="container mt-5">
+  <h1 class="mb-4">Frequently Asked Questions</h1>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          What features does our webpage offer?
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingOne"
+        data-bs-parent="#faqAccordion"
+      >
+        <div class="accordion-body">
+          Our website offers features such as job postings, networking
+          abilities, and many other ways to find work in your area.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+        >
+          How do I create a profile?
+        </button>
+      </h2>
+      <div
+        id="collapseTwo"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingTwo"
+        data-bs-parent="#faqAccordion"
+      >
+        <div class="accordion-body">
+          To create a profile, simply click on the 'Sign Up' button on our
+          homepage, fill in your details, and you’ll be guided through the
+          process of setting up your professional profile.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree"
+          aria-expanded="false"
+          aria-controls="collapseThree"
+        >
+          Why use this, apposed to other similar websites?
+        </button>
+      </h2>
+      <div
+        id="collapseThree"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingThree"
+        data-bs-parent="#faqAccordion"
+      >
+        You can not only find careers on here, but people needing daily tasks
+        done like landscaping, or dog walking.
+        <div class="accordion-body"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!--Brody Rines, 9/29/24, 2:30am-->
