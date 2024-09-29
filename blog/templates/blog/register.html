@@ -1,1 +1,27 @@
+<!--Eric Valle, 9/29/2024, 12:42pm-->
 {% extends 'blog/base.html' %}
+
+{% block register %}
+    <div class="registration-container">
+        <h2>Register Please</h2>
+        <form action="/submit-registration" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+{% endblock %} 
+
+<!--Eric Valle, 9/29/2024, 12:42pm-->
