@@ -16,3 +16,5 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+#create a class called user, 
