@@ -6,8 +6,10 @@
     <title>{% block title %}My Django Site{% endblock %}">
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!--Brody, Please make sure all content on this page is not repeated from base.html, including bootstrap links-->
+    <!--I deleted the following two things, static css line because it is extended by base.html already and an extra end block 
+    at the end of this page, extending the base html file does not require a end block-->
 </head>
 <body>
     <header>
@@ -50,5 +52,4 @@
 </body>
 </html>
 
-{% endblock %}
 <!--Brody Rines 10/2/2024-->
