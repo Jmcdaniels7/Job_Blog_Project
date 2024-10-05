@@ -1,13 +1,18 @@
 <!--Eric Valle, 9/29/2024, 12:42pm-->
 {% extends 'blog/base.html' %}
 
-{% block register %}
+{% block content %}
     <div class="registration-container">
-        <h2>Register Please</h2>
-        <form action="/submit-registration" method="POST">
+        <h2>Register </h2>
+        <form action="register" method="POST">
+            {% csrf_token %}
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="first name">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="last name">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
             </div>
             <div class="form-group">
                 <label for="email">Email Address:</label>
@@ -18,10 +23,14 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="password" name="confirmpassword" required>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Register">
             </div>
         </form>
     </div>
 {% endblock %} 
 
-<!--Eric Valle, 9/29/2024, 12:42pm-->
+<!--Jacob McDaniels, 10/5/2024, 10:37pm-->
