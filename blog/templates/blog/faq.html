@@ -2,82 +2,74 @@
 {% extends 'blog/base.html' %} {% block content %}
 <div class="container mt-5">
   <h1 class="mb-4">Frequently Asked Questions</h1>
-  <div class="accordion" id="faqAccordion">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button
-          class="accordion-button"
-          type="button"
+
+  <div class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="faqDropdown"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Select a Question
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="faqDropdown">
+      <li>
+        <a
+          class="dropdown-item"
+          href="#"
           data-bs-toggle="collapse"
-          data-bs-target="#collapseOne"
-          aria-expanded="true"
-          aria-controls="collapseOne"
+          data-bs-target="#faqOne"
+          aria-expanded="false"
+          aria-controls="faqOne"
         >
           What features does our webpage offer?
-        </button>
-      </h2>
-      <div
-        id="collapseOne"
-        class="accordion-collapse collapse show"
-        aria-labelledby="headingOne"
-        data-bs-parent="#faqAccordion"
-      >
-        <div class="accordion-body">
-          Our website offers features such as job postings, networking
-          abilities, and many other ways to find work in your area.
+        </a>
+        <div class="collapse" id="faqOne">
+          <div class="card card-body">
+            Our website offers features such as job postings, networking
+            abilities, and many other ways to find work in your area.
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button
-          class="accordion-button collapsed"
-          type="button"
+      </li>
+      <li>
+        <a
+          class="dropdown-item"
+          href="#"
           data-bs-toggle="collapse"
-          data-bs-target="#collapseTwo"
+          data-bs-target="#faqTwo"
           aria-expanded="false"
-          aria-controls="collapseTwo"
+          aria-controls="faqTwo"
         >
           How do I create a profile?
-        </button>
-      </h2>
-      <div
-        id="collapseTwo"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingTwo"
-        data-bs-parent="#faqAccordion"
-      >
-        <div class="accordion-body">
-          To create a profile, simply click on the 'Sign Up' button on our
-          homepage, fill in your details, and you’ll be guided through the
-          process of setting up your professional profile.
+        </a>
+        <div class="collapse" id="faqTwo">
+          <div class="card card-body">
+            To create a profile, simply click on the 'Sign Up' button on our
+            homepage, fill in your details, and you’ll be guided through the
+            process of setting up your professional profile.
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button
-          class="accordion-button collapsed"
-          type="button"
+      </li>
+      <li>
+        <a
+          class="dropdown-item"
+          href="#"
           data-bs-toggle="collapse"
-          data-bs-target="#collapseThree"
+          data-bs-target="#faqThree"
           aria-expanded="false"
-          aria-controls="collapseThree"
+          aria-controls="faqThree"
         >
-          Why use this, apposed to other similar websites?
-        </button>
-      </h2>
-      <div
-        id="collapseThree"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingThree"
-        data-bs-parent="#faqAccordion"
-      >
-        You can not only find careers on here, but people needing daily tasks
-        done like landscaping, or dog walking.
-        <div class="accordion-body"></div>
-      </div>
-    </div>
+          Why use this apposed to other similar websites?
+        </a>
+        <div class="collapse" id="faqThree">
+          <div class="card card-body">
+            You can not only find careers here, but also people needing daily
+            tasks done, like landscaping or dog walking.
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 {% endblock %}
