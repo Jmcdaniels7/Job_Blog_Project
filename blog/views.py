@@ -39,7 +39,7 @@ def register(request):
                     first_name=firstname, last_name=lastname, email=email, password=password, username=username
                 )
                 user.save()
-                messages.success(request, 'Account created successfully.')
+                messages.info(request, 'Account created successfully.')
                 return redirect('/')
         else:
             messages.info(request, 'Passwords do not match.')
