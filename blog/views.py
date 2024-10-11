@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.contrib import messages  # For user feedback
 from .models import Post, Review
-from .forms import PostForm, ReviewForm
+from .forms import PostForm
 
 # this is a view to what page opens when the website is first visited
 def home(request):
@@ -91,33 +91,20 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
-# List all reviews for a post
-def review_list(request, post_id):
-    post = get_object_or_404(Post, pk=post_id)
-    reviews = post.reviews.all()  # Access all reviews for this post
-    return render(request, 'reviews/review_list.html', {'post': post, 'reviews': reviews})
-
-# View details of a specific review
-def review_detail(request, review_id):
-    review = get_object_or_404(Review, pk=review_id)
-    return render(request, 'reviews/review_detail.html', {'review': review})
-
 # Add a new review to a post
-def add_review(request, post_id):
-    post = get_object_or_404(Post, pk=post_id)
+def add_review(request):
     if request.method == "POST":
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.author = request.user
-            review.post = post
-            review.created_date = timezone.now()
-            review.save()
-            return redirect('review_list', post_id=post.pk)
-    else:
-        form = ReviewForm()
-    return render(request, 'reviews/add_review.html', {'form': form})
+        rating = request.POST['rating']
+        comment = request.POST['comment']
+        createdDate = request.POST['created_date']
+        publishedDate = request.POST['published_date']
 
-#Jacob McDaniels, 10/5/2024, 10:44am
-#Kendal Jackson, 10/10/24, 10:29am
-#Jacob McDaniels, 10/11/2024, 1:45pm
+        review = Review.objects.create_review(
+            rating=rating, comment=comment, createdDate=createdDate, publishedDate=publishedDate
+        )
+        review.save()
+        return redirect('/')
+
+    return render(request, 'blog/add_review.html')
+
+#Jacob McDaniels, 10/11/2024, 7:08pm

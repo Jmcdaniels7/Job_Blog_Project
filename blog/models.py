@@ -19,14 +19,13 @@ class Post(models.Model):
 
 # Review model
 class Review(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='reviews')
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     rating = models.IntegerField()
     comment = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
+    published_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return f'{self.author} - {self.rating}'
 
 
-#Kendal Jackson, 10/10/24, 10:30am
+#Jacob McDaniels, 10/11/2024, 7:08pm

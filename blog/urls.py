@@ -18,12 +18,6 @@ urlpatterns = [
     # Review-related paths
     # Our feedback button should lead us to a page where a user can make a review on our page
     # Then that data will get sent to the data base.
-    path('post/<int:pk>/reviews/', views.review_list, name='review_list'),  # Changed post_id to pk
-    path('review/<int:review_id>/', views.review_detail, name='review_detail'),
-    path('post/<int:pk>/reviews/add/', views.add_review, name='add_review'),  # Changed post_id to pk
+    path('blog/add_review/', views.add_review, name='add_review'), 
 ]
-
-
-#Jacob McDaniels, 9/29/2024, 9:30pm
-#Kendal Jackson, 10/10/24, 10:30am
-#Jacob McDaniels, 10/11/2024, 1:49pm
+#Jacob McDaniels, 10/11/2024, 7:07pm
