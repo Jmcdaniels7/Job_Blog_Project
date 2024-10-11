@@ -15,6 +15,10 @@
                 <input type="text" id="lastname" name="lastname" required>
             </div>
             <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
             </div>
@@ -31,6 +35,11 @@
             </div>
         </form>
     </div>
+    <div>
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
 {% endblock %} 
 
-<!--Jacob McDaniels, 10/5/2024, 10:37pm-->
+<!--Jacob McDaniels, 10/11/2024, 1:44pm-->

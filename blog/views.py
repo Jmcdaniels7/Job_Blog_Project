@@ -6,12 +6,12 @@ from django.contrib import messages  # For user feedback
 from .models import Post, Review
 from .forms import PostForm, ReviewForm
 
-# Home page view
+# this is a view to what page opens when the website is first visited
 def home(request):
     template = 'blog/home.html'
     return render(request, template)
 
-# Another homepage (possibly redundant, consider merging)
+# This is for the home button on base.html to work
 def homepage(request):
     template = 'blog/home.html'
     return render(request, template)
@@ -21,24 +21,31 @@ def register(request):
     if request.method == 'POST':
         firstname = request.POST['firstname']
         lastname = request.POST['lastname']
+        username = request.POST['username']
         email = request.POST['email']
         password = request.POST['password']
         confirmpassword = request.POST['confirmpassword']
 
         if password == confirmpassword:
-            if User.objects.filter(email=email).exists():  # Fixed typo
-                messages.error(request, 'Email is already in use.')
+            if User.objects.filter(email=email).exists():  # checks for existing email
+                messages.info(request, 'Email is already in use.') 
+                return redirect('register') #redirects the page back to register.html with message
+            elif User.objects.filter(username=username).exists():
+                messages.info(request, 'Username is already in use.')
+                return redirect('register')
             else:
+                #This saves a user in the database
                 user = User.objects.create_user(
-                    first_name=firstname, last_name=lastname, email=email, password=password
+                    first_name=firstname, last_name=lastname, email=email, password=password, username=username
                 )
                 user.save()
                 messages.success(request, 'Account created successfully.')
-                return redirect('home')
+                return redirect('/')
         else:
-            messages.error(request, 'Passwords do not match.')
-
-    return render(request, 'blog/register.html')
+            messages.info(request, 'Passwords do not match.')
+            return redirect('register')
+    else:
+        return render(request, 'blog/register.html')
 
 # FAQ page view
 def faq(request):
@@ -113,3 +120,4 @@ def add_review(request, post_id):
 
 #Jacob McDaniels, 10/5/2024, 10:44am
 #Kendal Jackson, 10/10/24, 10:29am
+#Jacob McDaniels, 10/11/2024, 1:45pm
