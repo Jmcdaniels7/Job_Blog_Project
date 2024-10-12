@@ -24,7 +24,8 @@ h1 a, h2 a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h6 {
     font-family: 'Papyrus';
 }
 
@@ -75,7 +76,7 @@ h4 {
     color: #FFFFFF;
     background-color: #C25100;
 }
-/*Jacob McDaniels, 9/26/2024, 10:30am*/
+/*Jacob McDaniels, 10/12/2024, 4:34pm*/
 
 /* Eric Valle, 9/29/2024, 1:22pm*/
 .registration-container {

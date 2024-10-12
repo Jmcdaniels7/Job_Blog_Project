@@ -89,6 +89,16 @@
   </div>
 </main>
 
+{% for post in posts %}
+  <article class="post">
+      <time class="date">
+          {{ post.published_date }}
+      </time>
+      <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+      <h6>Author: {{ post.author }}</h6>
+  </article>
+{% endfor %}
+
 {% endblock %} 
 
 {% block footer %}
@@ -97,4 +107,4 @@
 </footer>
 {% endblock %}
 
-<!--Brody Rines 10/2/2024-->
+<!--Jacob McDaniels, 10/12/2024, 4:35pm-->

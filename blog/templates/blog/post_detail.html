@@ -1,11 +1,14 @@
+<!--Jacob McDaniels, 10/12/2024, 4:36pm-->
 {% extends 'blog/base.html' %}
 
 {% block content %}
     <article class="post">
         <aside class="actions">
+            {% if post.author.id == user.id %}
             <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
                 {% include './icons/pencil-fill.svg' %}
             </a>
+            {% endif %}
         </aside>
         {% if post.published_date %}
             <time class="date">
@@ -15,4 +18,6 @@
         <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
     </article>
+
 {% endblock %}
+<!--Jacob McDaniels, 10/12/2024, 4:36pm-->

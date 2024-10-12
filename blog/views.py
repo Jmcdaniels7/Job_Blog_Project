@@ -9,12 +9,14 @@ from .forms import PostForm
 # this is a view to what page opens when the website is first visited
 def home(request):
     template = 'blog/home.html'
-    return render(request, template)
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, template, {'posts': posts})
 
 # This is for the home button on base.html to work
 def homepage(request):
     template = 'blog/home.html'
-    return render(request, template)
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, template, {'posts': posts})
 
 #login view
 def login(request):
