@@ -1,7 +1,7 @@
 #Jacob McDaniels, 9/29/2024, 8:12pm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, auth
 from django.contrib import messages  # For user feedback
 from .models import Post, Review
 from .forms import PostForm
@@ -15,6 +15,31 @@ def home(request):
 def homepage(request):
     template = 'blog/home.html'
     return render(request, template)
+
+#login view
+def login(request):
+    if request.method =='POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username,password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request, 'Invalid login, username or password is not registered')
+            return redirect('login')
+
+    else:
+        return render(request, 'blog/login.html')
+    
+#logout view
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
+
 
 # User registration view
 def register(request):
@@ -40,7 +65,7 @@ def register(request):
                 )
                 user.save()
                 messages.info(request, 'Account created successfully.')
-                return redirect('/')
+                return redirect('login')
         else:
             messages.info(request, 'Passwords do not match.')
             return redirect('register')

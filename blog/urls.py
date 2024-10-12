@@ -19,5 +19,9 @@ urlpatterns = [
     # Our feedback button should lead us to a page where a user can make a review on our page
     # Then that data will get sent to the data base.
     path('blog/add_review/', views.add_review, name='add_review'), 
+
+    #login and logout path
+    path('blog/login/', views.login, name='login'),
+    path('blog/logout/', views.logout, name='logout'),
 ]
 #Jacob McDaniels, 10/11/2024, 7:07pm
