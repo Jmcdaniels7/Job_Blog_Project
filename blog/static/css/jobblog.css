@@ -1,36 +1,33 @@
 /*Jacob McDaniels, 9/26/2024, 9:43am*/
-h1 a, h2 a {
-    color:#2400c2;
-    font-family: 'Papyrus';
-    
+body {
+    font-family: 'Papyrus', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    line-height: 1.6;
 }
 
 .page-header {
-    background-color: #1d00c2;
-    margin-top: 0;
+    background-color: #2a00e0;
+    text-align: center;
     margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .page-header h1,
-.page-header h1 a,
-.page-header h1 a:visited,
-.page-header h1 a:active {
+.page-header h1 a {
+    font-family:'Papyrus', sans-serif;
     color: #ffffff;
-    font-size: 28pt;
+    font-size: 36pt;
     text-decoration: none;
-    text-align: left;
+    margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h6 {
-    font-family: 'Papyrus';
+h1, h2, h3, h4, h6 {
+    font-family: 'Papyrus', sans-serif;
 }
 
 .date {
-    color: #828282;
+    color: #999999;
 }
 
 .save {
@@ -40,6 +37,11 @@ h6 {
 .post-form textarea,
 .post-form input {
     width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
 .top-menu,
@@ -47,17 +49,33 @@ h6 {
 .top-menu:visited {
     color: #ffffff;
     float: right;
-    font-size: 26pt;
+    font-size: 18pt;
     margin-right: 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #2400c2;
+    transition: background-color 0.3s ease;
+}
+
+.top-menu:hover {
+    background-color: #1a0287;
 }
 
 .post {
     margin-bottom: 70px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .post h2 a,
 .post h2 a:visited {
-    color: #000000;
+    color: #333333;
+    text-decoration: none;
+}
+
+.post h2 a:hover {
+    color: #2a00e0;
 }
 
 .post > .date,
@@ -67,85 +85,75 @@ h6 {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
-    background: none;
-    border-color: #C25100;
+    color: #ffffff;
+    background-color: #808080; /* Changed from orange to grey */
+    border: 1px solid #808080; /* Changed from orange to grey */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-secondary:hover {
-    color: #FFFFFF;
-    background-color: #C25100;
+    color: #ffffff;
+    background-color: #696969; /* Darker grey on hover */
 }
-/*Jacob McDaniels, 10/12/2024, 4:34pm*/
 
-/* Eric Valle, 9/29/2024, 1:22pm*/
 .registration-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 40px auto;
+    text-align: center;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
+
 .form-group input {
     width: 100%;
-    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
+
 .form-group input[type="submit"] {
-    background-color: #2400c2;
+    background-color: #2a00e0;
     color: white;
     cursor: pointer;
+    font-size: 16px;
     border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
+
 .form-group input[type="submit"]:hover {
     background-color: #1a0287;
 }
-/* Eric Valle, 9/29/2024, 1:22pm*/
 
+@media (max-width: 600px) {
+    .page-header h1 {
+        font-size: 24pt;
+    }
 
-/* Eric Valle, 10/12/2024, 1:47am*/
-.profile-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    .top-menu {
+        font-size: 14pt;
+    }
 
-.form-group input[type="password"] {
-    font-family: 'Courier New', Courier, monospace;
-}
-.form-group input[type="file"] {
-    padding: 3px;
-}
+    .btn-secondary {
+        font-size: 14px;
+    }
 
-.profile-picture {
-    text-align: center;
-    margin-bottom: 15px;
+    .post {
+        padding: 0;
+    }
 }
-.profile-picture img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-/* Eric Valle, 10/12/2024, 1:47am*/
+/*Damon Akinyemi 10/13/2024 6.29pm*/
