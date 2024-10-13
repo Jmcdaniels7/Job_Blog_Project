@@ -83,14 +83,10 @@
 </div>
 
 <script>
-    // Manual button functionality
     document.querySelectorAll('.accordion-button').forEach(button => {
         button.addEventListener('click', () => {
-            // Toggle active class for the button
             button.classList.toggle('collapsed');
-            // Get the target collapse ID
             const targetCollapse = button.getAttribute('data-bs-target');
-            // Toggle the collapse
             const collapseElement = document.querySelector(targetCollapse);
             collapseElement.classList.toggle('show');
         });
