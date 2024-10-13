@@ -1,0 +1,45 @@
+<!--Eric Valle, 10/12/2024, 7:00pm-->
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="profile-container">
+    <h2>Edit Profile</h2>
+    <div class="profile-picture">
+        <!-- Default Profile Picture -->
+        <img id="profile-img" src="default.png" alt="Profile Picture">
+    </div>
+    <form action="/submit_profile" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" value={{user.first_name}}>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" value={{user.last_name}}>
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value={{user.username}}>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value={{user.email}}>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="password">
+        </div>
+        <div class="form-group">
+            <label for="profile-picture">Upload New Profile Picture</label>
+            <input type="file" id="profile-picture" name="profile_picture" accept="image/*" onchange="loadProfilePicture(event)">
+        </div>
+        <div class="form-group">
+            <label for="resume">Upload New Resume (PDF)</label>
+            <input type="file" id="resume" name="resume" accept=".pdf">
+        </div>
+        <button type="submit" class="submit-btn">Save Changes</button>
+    </form>
+</div>
+{% endblock %} 
+<!--Eric Valle, 10/12/2024, 7:00pm-->

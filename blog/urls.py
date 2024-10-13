@@ -8,6 +8,7 @@ urlpatterns = [
     path('blog/home/', views.homepage, name='homepage'),
     path('blog/post_list/', views.post_list, name='post_list'),
     path('blog/register/', views.register, name='register'),
+    path('blog/profile/', views.profile, name='profile'),
     path('blog/faq/', views.faq, name='faq'),
 
     # Post-related paths

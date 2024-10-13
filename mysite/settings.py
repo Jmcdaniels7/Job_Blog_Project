@@ -25,7 +25,11 @@ SECRET_KEY = "django-insecure-vo!q3i9#&hrnx&9=@0k@&19vd@&f)5y+__zxn*oast)d)f%60@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+#/ Eric Valle 12:00am /#
+# Changed for local testing
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
+#ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+#/ Eric Valle 12:00am /#
 
 
 # Application definition
@@ -74,6 +78,17 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
+# Eric Valle 12:00am
+# Changed for local testing
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',     
+    }
+}
+
+"""
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
@@ -84,6 +99,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+"""
+# Eric Valle 12:00am
 
 
 # Password validation
