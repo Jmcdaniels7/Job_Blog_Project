@@ -135,3 +135,12 @@ def add_review(request):
     return render(request, 'blog/add_review.html')
 
 #Jacob McDaniels, 10/11/2024, 7:08pm
+
+#Eric Valle 10/12/2024, 1:00am
+
+# This is for the profile page on base.html to work
+def profile(request):
+    template = 'blog/profile.html'
+    return render(request, template)
+
+#Eric Valle 10/12/2024, 1:00am
