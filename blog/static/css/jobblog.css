@@ -1,6 +1,6 @@
 /*Jacob McDaniels, 9/26/2024, 9:43am*/
 body {
-    font-family: 'Papyrus', sans-serif;
+    font-family: 'Roboto', sans-serif; 
     background-image: url('https://www.whiteheadassoc.com/wp-content/uploads/2018/09/iStock-998993038.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@ body {
 }
 
 .page-header {
-    background-color: rgba(42, 0, 224, 0.8);
+    background-color: transparent; 
     text-align: center;
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -18,15 +18,19 @@ body {
 
 .page-header h1,
 .page-header h1 a {
-    font-family: 'Papyrus', sans-serif;
+    font-family: 'Papyrus', sans-serif; 
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
     margin: 0;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 h1, h2, h3, h4, h6 {
-    font-family: 'Papyrus', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .date {
@@ -47,6 +51,7 @@ h1, h2, h3, h4, h6 {
     font-size: 16px;
 }
 
+
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
@@ -56,12 +61,13 @@ h1, h2, h3, h4, h6 {
     margin-right: 20px;
     text-decoration: none;
     border-radius: 4px;
-    background-color: #2400c2;
+    background-color: rgba(128, 128, 128, 0.5); 
+    padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
 
 .top-menu:hover {
-    background-color: #1a0287;
+    background-color: rgba(128, 128, 128, 0.7);
 }
 
 .post {
@@ -89,8 +95,8 @@ h1, h2, h3, h4, h6 {
 .btn-secondary,
 .btn-secondary:visited {
     color: #ffffff;
-    background-color: #808080;
-    border: 1px solid #808080;
+    background-color: #808080; 
+    border: 1px solid #808080; 
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -98,7 +104,7 @@ h1, h2, h3, h4, h6 {
 
 .btn-secondary:hover {
     color: #ffffff;
-    background-color: #696969;
+    background-color: #696969; 
 }
 
 .registration-container {
