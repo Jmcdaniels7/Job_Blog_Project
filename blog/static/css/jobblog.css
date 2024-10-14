@@ -23,6 +23,7 @@ body {
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 20px;
+    color: white; 
 }
 
 .header-title {
@@ -51,8 +52,7 @@ body {
 }
 
 .top-menu a {
-    color: #000000;
-    font-size: 18pt;
+    color: #ffffff; 
     margin-right: 20px;
     text-decoration: none;
     border-radius: 4px;
@@ -104,15 +104,16 @@ body {
     margin-bottom: 5px;
     font-weight: bold;
     text-align: left;
+    color: white; 
 }
 
 .form-group input {
-    width: 80%; /* This will make the input box narrower */
+    width: 80%; 
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     padding: 10px;
-    margin: 0 auto; /* Center the input fields */
+    margin: 0 auto; 
     display: block;
 }
 
@@ -136,7 +137,7 @@ body {
     padding: 20px;
     max-width: 400px;
     width: 100%;
-    margin: 80px auto; /* Margin to position it nicely */
+    margin: 80px auto; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -166,7 +167,6 @@ body {
         padding: 10px;
     }
 }
-
 
 
 
