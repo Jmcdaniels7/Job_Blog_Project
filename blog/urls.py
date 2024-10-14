@@ -8,9 +8,11 @@ urlpatterns = [
     path('blog/home/', views.homepage, name='homepage'),
     path('blog/post_list/', views.post_list, name='post_list'),
     path('blog/register/', views.register, name='register'),
-    #Eric Valle, 10/12/2024, 1:00am
+    
+    #profile path
     path('blog/profile/', views.profile, name='profile'),
-    #Eric Valle, 10/12/2024, 1:00am
+    
+    #faq path
     path('blog/faq/', views.faq, name='faq'),
 
     # Post-related paths
@@ -27,4 +29,4 @@ urlpatterns = [
     path('blog/login/', views.login, name='login'),
     path('blog/logout/', views.logout, name='logout'),
 ]
-#Jacob McDaniels, 10/11/2024, 7:07pm
+#Eric Valle, 10/12/2024, 1:00am

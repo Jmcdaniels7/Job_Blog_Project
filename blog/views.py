@@ -134,13 +134,23 @@ def add_review(request):
 
     return render(request, 'blog/add_review.html')
 
-#Jacob McDaniels, 10/11/2024, 7:08pm
-
-#Eric Valle 10/12/2024, 1:00am
-
-# This is for the profile page on base.html to work
 def profile(request):
     template = 'blog/profile.html'
-    return render(request, template)
 
-#Eric Valle 10/12/2024, 1:00am
+    if request.method == 'POST':
+        firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+
+        user = User.objects.update(
+            first_name=firstname, last_name=lastname, email=email, password=password, username=username
+        )
+        user.save()
+        messages.info(request, 'Account edited successfully.')
+        return redirect('profile')
+    else:
+        return render(request, template)
+
+#Eric Valle 10/13/2024, 8:00pm
