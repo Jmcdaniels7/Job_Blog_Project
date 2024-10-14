@@ -2,32 +2,32 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <div class="login-container">
-        <h2>Login</h2>
-        <!--Do not change the form action-->
-        <form action="" method="POST">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="text" id="password" name="password" required>
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="Login">
-            </div>
-        </form>
-    </div>
+    <div class="wrapper">
+        <div class="login-container">
+            <h2>Login</h2>
+            <!--Do not change the form action-->
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="text" id="password" name="password" required>
+                </div>
 
-    <div>
-        {% for message in messages %}
-        <h3> {{message}} </h3>
-        {% endfor %}
-    </div>
-    
-{% endblock %} 
+                <div class="form-group">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
 
-<!--Jacob McDaniels, 10/12/2024, 11:23am-->
+        <div>
+            {% for message in messages %}
+            <h3>{{ message }}</h3>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+<!--Damon Akinyemi, 10/13/2024, 9:12pm-->
