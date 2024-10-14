@@ -105,10 +105,11 @@ body {
 }
 
 .form-group input {
-    width: 40%;
-    border: 1px solid #181717;
+    width: 100%;
+    border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    padding: 10px;
 }
 
 .form-group input[type="submit"] {
@@ -123,6 +124,21 @@ body {
 
 .form-group input[type="submit"]:hover {
     background-color: #1a0287;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width: 600px) {
@@ -145,7 +161,12 @@ body {
     .post {
         padding: 0;
     }
+
+    .login-container {
+        padding: 10px;
+    }
 }
+
 
 
 
