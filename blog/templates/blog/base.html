@@ -12,6 +12,9 @@
       .navbar-nav {
           margin-left: auto;
       }
+      .nav-link {
+          margin: 5px; /* Add spacing between buttons */
+      }
     </style>
 
 </head>
@@ -33,28 +36,26 @@
                       <span class="nav-link">Hello, {{user.first_name}}</span>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="{% url 'post_new' %}">Create Post</a>
+                      <a class="nav-link btn btn-primary" aria-current="page" href="{% url 'post_new' %}">Create Post</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/blog/add_review">Feedback</a>
-                    </li>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/blog/faq">FAQ</a>
-                    </li>
+                      <a class="nav-link btn btn-primary" href="/blog/add_review">Feedback</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/blog/profile">Profile</a>
+                      <a class="nav-link btn btn-primary" href="/blog/faq">FAQ</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/blog/logout">Logout</a>
+                      <a class="nav-link btn btn-primary" href="/blog/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link btn btn-danger" href="/blog/logout">Logout</a>
                     </li>
                   {% else %}
                     <li class="nav-item">
-                      <a class="nav-link" href="/blog/login">Login</a>
+                      <a class="nav-link btn btn-primary" href="/blog/login">Login</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/blog/register">Register</a>
+                      <a class="nav-link btn btn-secondary" href="/blog/register">Register</a>
                     </li>
                   {% endif %}
                 </ul>
@@ -75,5 +76,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w7ak6YW72CwBWRfL/O9r/Rk/vx41HtwsXtuRx11BTtpHbLzYJ5pYZMQ8AXcbv/YK" crossorigin="anonymous"></script>
 </body>
 </html>
-
 <!--Jacob McDaniels, 10/11/2024, 7:08pm-->
