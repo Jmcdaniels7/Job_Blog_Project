@@ -1,6 +1,6 @@
 /*Jacob McDaniels, 9/26/2024, 9:43am*/
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; 
     background-image: url('https://www.whiteheadassoc.com/wp-content/uploads/2018/09/iStock-998993038.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,57 +9,63 @@ body {
     line-height: 1.6;
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .page-header {
-    background-color: transparent;
+    background-color: transparent; 
     text-align: center;
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.header-title {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+.page-header h1,
+.page-header h1 a {
+    font-family: 'Papyrus', sans-serif; 
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
     font-size: 36pt;
-    font-weight: bold;
     text-decoration: none;
+    margin: 0;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
 }
 
-.header-title:hover {
-    background-color: rgba(128, 128, 128, 0.7);
+h1, h2, h3, h4, h6 {
+    font-family: 'Roboto', sans-serif;
 }
 
-.top-menu {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.date {
+    color: #999999;
 }
 
-.top-menu a {
-    color: #000000;
+.save {
+    float: right;
+}
+
+.post-form textarea,
+.post-form input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
     font-size: 18pt;
     margin-right: 20px;
     text-decoration: none;
     border-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.5); 
     padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
 
-.top-menu a:hover {
+.top-menu:hover {
     background-color: rgba(128, 128, 128, 0.7);
 }
 
@@ -70,17 +76,34 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.post h2 a,
+.post h2 a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+.post h2 a:hover {
+    color: #2a00e0;
+}
+
+.post > .date,
+.post > .actions {
+    float: right;
+}
+
 .btn-secondary,
 .btn-secondary:visited {
     color: #ffffff;
-    background-color: #808080;
-    border: 1px solid #808080;
+    background-color: #808080; 
+    border: 1px solid #808080; 
+    text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .btn-secondary:hover {
-    background-color: #696969;
+    color: #ffffff;
+    background-color: #696969; 
 }
 
 .registration-container {
@@ -124,16 +147,20 @@ body {
     background-color: #1a0287;
 }
 
-@media (max-width: 600px) {
-    .wrapper {
-        padding: 10px 20px;
-    }
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);  
+    padding: 20px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+}
 
-    .header-title {
+@media (max-width: 600px) {
+    .page-header h1 {
         font-size: 24pt;
     }
 
-    .top-menu a {
+    .top-menu {
         font-size: 14pt;
     }
 
@@ -148,6 +175,6 @@ body {
 
 
 
-/*Damon Akinyemi 10/13/2024 6.29pm*/
+/*Damon Akinyemi 10/13/2024 9:16pm*/
 
 
