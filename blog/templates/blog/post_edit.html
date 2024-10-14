@@ -5,12 +5,9 @@
     <div class="wrapper">
         <h2>New post</h2>
         <form method="POST" class="post-form">{% csrf_token %}
-           <div class="form-group">
-               <input type="text" id="post" name="post" value= {{ form.as_p }}>
-               <button type="submit" class="save btn btn-secondary">Save</button>   
-           </div>
-            
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-secondary">Save</button>
         </form>
     </div>
 {% endblock %}
-<!--Jacob McDaniels, 10/11/2024, 1:44pm-->
+<!--Jacob McDaniels, 10/13/2024, 11:30pm-->

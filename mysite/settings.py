@@ -76,12 +76,16 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'JobBlog',
-        'USER': 'postgres',
-        'PASSWORD': 'jacob',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        #PosgreSQL used on my machine but not available on other machines unless paid for through 
+        #PythonAnywhere
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'JobBlog',
+        #'USER': 'postgres',
+        #'PASSWORD': 'jacob',
+        #'HOST': 'localhost',
+        #'PORT': '5432',
     }
 }
 
