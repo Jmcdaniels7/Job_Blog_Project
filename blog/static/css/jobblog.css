@@ -23,7 +23,6 @@ body {
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 20px;
-    color: white; 
 }
 
 .header-title {
@@ -52,7 +51,8 @@ body {
 }
 
 .top-menu a {
-    color: #ffffff; 
+    color: #000000; /* Keep original color */
+    font-size: 18pt;
     margin-right: 20px;
     text-decoration: none;
     border-radius: 4px;
@@ -103,8 +103,7 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    text-align: left;
-    color: white; 
+    text-align: left; /* Keep original alignment */
 }
 
 .form-group input {
@@ -119,7 +118,7 @@ body {
 
 .form-group input[type="submit"] {
     background-color: #2a00e0;
-    color: white;
+    color: white; /* Keep original color */
     cursor: pointer;
     font-size: 16px;
     border: none;
