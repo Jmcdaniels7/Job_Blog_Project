@@ -9,11 +9,11 @@ body {
     line-height: 1.6;
 }
 
-/* Wrapper for both nav bar and "Job Blog" */
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);  
     padding: 20px 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
 }
@@ -38,20 +38,20 @@ body {
     border-radius: 5px;
 }
 
-/* White buttons for navigation items on top of the wrapper */
+
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
-    color: #000000; /* Black text for contrast */
+    color: #000000; 
     font-size: 18pt;
     margin-right: 20px;
     text-decoration: none;
     border-radius: 4px;
-    background-color: #ffffff; /* White background for buttons */
+    background-color: #ffffff; 
     padding: 10px 20px;
     transition: background-color 0.3s ease;
     position: relative;
-    top: -40px; /* Move buttons on top of the wrapper */
+    top: -40px; 
     display: inline-block;
 }
 
