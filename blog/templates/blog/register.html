@@ -2,6 +2,7 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<div class="wrapper">
     <div class="registration-container">
         <h2>Register </h2>
         <!--Do not change the form action-->
@@ -36,6 +37,7 @@
             </div>
         </form>
     </div>
+</div>
     <div>
         {% for message in messages %}
         <h3> {{message}} </h3>
