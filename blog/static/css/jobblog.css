@@ -1,6 +1,6 @@
 /*Jacob McDaniels, 9/26/2024, 9:43am*/
 body {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     background-image: url('https://www.whiteheadassoc.com/wp-content/uploads/2018/09/iStock-998993038.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,63 +9,58 @@ body {
     line-height: 1.6;
 }
 
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .page-header {
-    background-color: transparent; 
+    background-color: transparent;
     text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
 }
 
-.page-header h1,
-.page-header h1 a {
-    font-family: 'Papyrus', sans-serif; 
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
-    margin: 0;
-    background-color: rgba(128, 128, 128, 0.5);
-    padding: 10px 20px;
+.header-title {
     display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-}
-
-h1, h2, h3, h4, h6 {
-    font-family: 'Roboto', sans-serif;
-}
-
-.date {
-    color: #999999;
-}
-
-.save {
-    float: right;
-}
-
-.post-form textarea,
-.post-form input {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-.top-menu,
-.top-menu:hover,
-.top-menu:visited {
     color: #ffffff;
-    float: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-title:hover {
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.top-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.top-menu a {
+    color: #000000;
     font-size: 18pt;
     margin-right: 20px;
     text-decoration: none;
     border-radius: 4px;
-    background-color: rgba(128, 128, 128, 0.5); 
     padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
 
-.top-menu:hover {
+.top-menu a:hover {
     background-color: rgba(128, 128, 128, 0.7);
 }
 
@@ -76,34 +71,17 @@ h1, h2, h3, h4, h6 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.post h2 a,
-.post h2 a:visited {
-    color: #333333;
-    text-decoration: none;
-}
-
-.post h2 a:hover {
-    color: #2a00e0;
-}
-
-.post > .date,
-.post > .actions {
-    float: right;
-}
-
 .btn-secondary,
 .btn-secondary:visited {
     color: #ffffff;
-    background-color: #808080; 
-    border: 1px solid #808080; 
-    text-decoration: none;
+    background-color: #808080;
+    border: 1px solid #808080;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .btn-secondary:hover {
-    color: #ffffff;
-    background-color: #696969; 
+    background-color: #696969;
 }
 
 .registration-container {
@@ -147,20 +125,16 @@ h1, h2, h3, h4, h6 {
     background-color: #1a0287;
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5);  
-    padding: 20px 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
-}
-
 @media (max-width: 600px) {
-    .page-header h1 {
+    .wrapper {
+        padding: 10px 20px;
+    }
+
+    .page-header .header-title {
         font-size: 24pt;
     }
 
-    .top-menu {
+    .top-menu a {
         font-size: 14pt;
     }
 
@@ -172,6 +146,12 @@ h1, h2, h3, h4, h6 {
         padding: 0;
     }
 }
+
+
+
+
+/* Eric Valle, 9/29/2024, 1:22pm*/
+/*Brody Rines 10/12/2024, 7:00pm*/
 
 
 
